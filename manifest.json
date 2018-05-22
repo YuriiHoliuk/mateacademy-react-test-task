@@ -1,0 +1,7 @@
+{
+  "name": "react-test-task",
+  "short_name": "react-test-task",
+  "description": "Form validation app for Mateacademy React course test task",
+  "start_url": "/",
+  "display": "standalone"
+}
