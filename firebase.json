@@ -1,0 +1,18 @@
+{
+  "hosting": {
+    "public": "build/default",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "./node_modules",
+      "./src",
+      "./test"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
