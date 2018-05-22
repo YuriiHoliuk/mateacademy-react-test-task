@@ -1,6 +1,9 @@
 {
   "name": "react-test-task",
   "description": "Form validation app for Mateacademy React course test task",
+  "scripts": {
+    "deploy": "polymer build && firebase deploy"
+  },
   "dependencies": {
     "@polymer/paper-button": "^3.0.0-pre.18",
     "@polymer/paper-input": "^3.0.0-pre.18",
