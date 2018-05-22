@@ -1,4 +1,10 @@
-import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
+import { html, PolymerElement } from '@polymer/polymer/polymer-element.js';
+
+import '@polymer/paper-input/paper-input.js';
+import '@polymer/paper-button/paper-button.js';
+
+import './components/app-header.js';
+import './components/form-validator.js';
 
 /**
  * @customElement
@@ -11,17 +17,29 @@ class ReactTestTaskApp extends PolymerElement {
         :host {
           display: block;
         }
+        
+        .buttons {
+          margin-top: 40px;
+        }
       </style>
-      <h2>Hello [[prop1]]!</h2>
+      
+      <app-header></app-header>
+      
+      <form-validator on-submit="onSubmit">
+        <form id="form" slot="form">
+          <paper-input name="firstName" label="First name"></paper-input>
+          <paper-input name="lastName" label="Last name"></paper-input>
+
+          <div class="buttons">
+            <button>Submit</button>
+          </div>
+        </form>
+      </form-validator>
     `;
   }
-  static get properties() {
-    return {
-      prop1: {
-        type: String,
-        value: 'react-test-task-app'
-      }
-    };
+
+  onSubmit(event) {
+    console.log(event);
   }
 }
 

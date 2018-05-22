@@ -2,6 +2,8 @@
   "name": "react-test-task",
   "description": "Form validation app for Mateacademy React course test task",
   "dependencies": {
+    "@polymer/paper-button": "^3.0.0-pre.18",
+    "@polymer/paper-input": "^3.0.0-pre.18",
     "@polymer/polymer": "^3.0.0"
   },
   "devDependencies": {
