@@ -1,10 +1,19 @@
 import { PolymerElement, html } from '@polymer/polymer';
 
+/**
+ * @customElement
+ * @polymer
+ */
 export class FormField extends PolymerElement {
+  static get is() {
+    return 'form-field';
+  }
+
   static get template() {
     return html`
       <style>
         :host {
+          display: block;
           font-family: Arial, Verdana, sans-serif;
           --base-color: #9B9B9B;
           --active-color: #009ECE;
@@ -144,10 +153,7 @@ export class FormField extends PolymerElement {
         type: Boolean,
         value: false
       },
-      pattern: {
-        type: String,
-        observer: '_changePattern',
-      },
+      pattern: String,
       min: String,
       max: String,
       disabled: {
@@ -162,6 +168,7 @@ export class FormField extends PolymerElement {
       valid: {
         type: Boolean,
         value: true,
+        readOnly: true
       },
       value: String,
       alwaysActiveLabel: Boolean
@@ -175,16 +182,16 @@ export class FormField extends PolymerElement {
 
   validate() {
     if (this.required && !this.value) {
-      this.valid = false;
+      this._setValid(false);
       return { required: true };
     }
 
     if (!this.inputElement.checkValidity()) {
-      this.valid = false;
+      this._setValid(false);
       return { invalid: true };
     }
 
-    this.valid = true;
+    this._setValid(true);
     return null;
   }
 
@@ -215,10 +222,6 @@ export class FormField extends PolymerElement {
     }
   }
 
-  _changePattern(pattern) {
-    console.log(pattern);
-  }
-
   _label(label) {
     return `${label}${label && this.required ? '*' : ''}`;
   }
@@ -236,4 +239,4 @@ export class FormField extends PolymerElement {
   }
 }
 
-customElements.define('form-field', FormField);
+customElements.define(FormField.is, FormField);

@@ -5,6 +5,10 @@ import { html, PolymerElement } from '@polymer/polymer/polymer-element.js';
  * @polymer
  */
 class AppHeader extends PolymerElement {
+  static get is() {
+    return 'app-header';
+  }
+
   static get template() {
     return html`
       <style>
@@ -36,4 +40,4 @@ class AppHeader extends PolymerElement {
   }
 }
 
-window.customElements.define('app-header', AppHeader);
+window.customElements.define(AppHeader.is, AppHeader);

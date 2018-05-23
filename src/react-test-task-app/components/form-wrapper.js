@@ -1,27 +1,17 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import { dom } from '@polymer/polymer/lib/legacy/polymer.dom.js';
 
-function validateInput(defaultValue, input) {
-  const errors = input.validate();
+import { validateInput } from "../utils/validate-input";
 
-  if (!!errors) {
-
-    if (errors.required) {
-      input.error = `${input.name} is required`;
-    } else if (errors) {
-      input.error = `${input.name} format is invalid`;
-    }
-
-    return false;
-
-  } else {
-    input.error = null;
-
-    return defaultValue;
+/**
+ * @customElement
+ * @polymer
+ */
+export class FormWrapper extends PolymerElement {
+  static get is() {
+    return 'form-wrapper';
   }
-}
 
-export class FormValidator extends PolymerElement {
   static get template() {
     return html`
       <style>
@@ -82,4 +72,4 @@ export class FormValidator extends PolymerElement {
   }
 }
 
-customElements.define('form-validator', FormValidator);
+customElements.define(FormWrapper.is, FormWrapper);

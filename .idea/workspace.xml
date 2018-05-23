@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca8d9dd3-2833-4052-936f-50e2492c2f3c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/react-test-task-app/utils/case-formatter.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/react-test-task-app/utils/validate-input.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/react-test-task-app/components/form-validator.js" afterPath="$PROJECT_DIR$/src/react-test-task-app/components/form-validator.js" />
+      <change beforePath="$PROJECT_DIR$/src/react-test-task-app/components/app-header.js" afterPath="$PROJECT_DIR$/src/react-test-task-app/components/app-header.js" />
+      <change beforePath="$PROJECT_DIR$/src/react-test-task-app/components/form-field.js" afterPath="$PROJECT_DIR$/src/react-test-task-app/components/form-field.js" />
+      <change beforePath="$PROJECT_DIR$/src/react-test-task-app/components/form-validator.js" afterPath="$PROJECT_DIR$/src/react-test-task-app/components/form-wrapper.js" />
       <change beforePath="$PROJECT_DIR$/src/react-test-task-app/react-test-task-app.js" afterPath="$PROJECT_DIR$/src/react-test-task-app/react-test-task-app.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,22 +22,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="react-test-task-app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="react-test-task-app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/react-test-task-app/react-test-task-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+            <state relative-caret-position="470">
+              <caret line="60" column="50" lean-forward="true" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
-                <marker date="1527027923332" expanded="true" signature="430:635" ph="..." />
-                <marker date="1527027923332" expanded="true" signature="446:483" ph="{...}" />
-                <marker date="1527027923332" expanded="true" signature="512:555" ph="{...}" />
-                <marker date="1527027923332" expanded="true" signature="582:621" ph="{...}" />
-                <marker date="1527027923332" expanded="true" signature="744:1282" ph="..." />
-                <marker date="1527027923332" expanded="true" signature="781:1114" ph="..." />
-                <marker date="1527027923332" expanded="true" signature="781:1258" ph="..." />
-                <marker date="1527027923332" expanded="true" signature="1189:1242" ph="..." />
+                <marker date="1527096032811" expanded="true" signature="387:592" ph="..." />
+                <marker date="1527096032811" expanded="true" signature="403:440" ph="{...}" />
+                <marker date="1527096032811" expanded="true" signature="469:512" ph="{...}" />
+                <marker date="1527096032811" expanded="true" signature="539:578" ph="{...}" />
+                <marker date="1527096032811" expanded="true" signature="699:1239" ph="..." />
+                <marker date="1527096032811" expanded="true" signature="736:1073" ph="..." />
+                <marker date="1527096032811" expanded="true" signature="736:1217" ph="..." />
+                <marker date="1527096032811" expanded="true" signature="1148:1201" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="case-formatter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/react-test-task-app/utils/case-formatter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+              <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -51,29 +65,39 @@
       <file leaf-file-name="app-header.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/react-test-task-app/components/app-header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
               <folding>
-                <marker date="1526985599149" expanded="true" signature="211:656" ph="..." />
-                <marker date="1526985599149" expanded="true" signature="227:315" ph="{...}" />
-                <marker date="1526985599149" expanded="true" signature="340:527" ph="{...}" />
-                <marker date="1526985599149" expanded="true" signature="548:642" ph="{...}" />
-                <marker date="1526985599149" expanded="true" signature="678:732" ph="..." />
+                <marker date="1527094158065" expanded="true" signature="261:706" ph="..." />
+                <marker date="1527094158065" expanded="true" signature="277:365" ph="{...}" />
+                <marker date="1527094158065" expanded="true" signature="390:577" ph="{...}" />
+                <marker date="1527094158065" expanded="true" signature="598:692" ph="{...}" />
+                <marker date="1527094158065" expanded="true" signature="728:782" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form-validator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/react-test-task-app/components/form-validator.js">
+      <file leaf-file-name="form-wrapper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/react-test-task-app/components/form-wrapper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="-527">
+              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="24" />
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
-                <marker date="1527027910957" expanded="true" signature="601:751" ph="..." />
-                <marker date="1527027910957" expanded="true" signature="617:737" ph="{...}" />
+                <marker date="1527094158056" expanded="true" signature="396:546" ph="..." />
+                <marker date="1527094158056" expanded="true" signature="412:532" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validate-input.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/react-test-task-app/utils/validate-input.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,29 +105,29 @@
       <file leaf-file-name="form-field.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/react-test-task-app/components/form-field.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
-                <marker date="1527027858945" expanded="true" signature="161:2319" ph="..." />
-                <marker date="1527027858945" expanded="true" signature="177:342" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="366:454" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="479:678" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="728:765" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="822:859" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="901:985" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="1018:1054" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="1087:1290" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="1331:1387" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="1427:1672" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="1697:1875" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="1900:2131" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="2163:2225" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="2256:2305" ph="{...}" />
-                <marker date="1527027858945" expanded="true" signature="2365:3155" ph="..." />
-                <marker date="1527027858945" expanded="true" signature="2419:3037" ph="..." />
-                <marker date="1527027858945" expanded="true" signature="2503:2552" ph="..." />
-                <marker date="1527027858945" expanded="true" signature="2593:3022" ph="..." />
-                <marker date="1527027858945" expanded="true" signature="3070:3142" ph="..." />
+                <marker date="1527094158067" expanded="true" signature="249:2433" ph="..." />
+                <marker date="1527094158067" expanded="true" signature="265:456" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="480:568" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="593:792" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="842:879" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="936:973" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="1015:1099" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="1132:1168" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="1201:1404" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="1445:1501" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="1541:1786" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="1811:1989" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="2014:2245" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="2277:2339" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="2370:2419" ph="{...}" />
+                <marker date="1527094158067" expanded="true" signature="2479:3269" ph="..." />
+                <marker date="1527094158067" expanded="true" signature="2533:3151" ph="..." />
+                <marker date="1527094158067" expanded="true" signature="2617:2666" ph="..." />
+                <marker date="1527094158067" expanded="true" signature="2707:3136" ph="..." />
+                <marker date="1527094158067" expanded="true" signature="3184:3256" ph="..." />
               </folding>
             </state>
           </provider>
@@ -147,6 +171,7 @@
     <findStrings>
       <find>\((\w+)\)</find>
       <find>obse</find>
+      <find>$</find>
     </findStrings>
     <replaceStrings>
       <replace>on-$1</replace>
@@ -159,12 +184,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/src/react-test-task-app/components/app-header.js" />
         <option value="$PROJECT_DIR$/firebase.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/react-test-task-app/components/form-field.js" />
         <option value="$PROJECT_DIR$/src/react-test-task-app/components/form-validator.js" />
+        <option value="$PROJECT_DIR$/src/react-test-task-app/components/app-header.js" />
+        <option value="$PROJECT_DIR$/src/react-test-task-app/utils/validate input.js" />
+        <option value="$PROJECT_DIR$/src/react-test-task-app/components/form-field.js" />
+        <option value="$PROJECT_DIR$/src/react-test-task-app/components/form-wrapper.js" />
+        <option value="$PROJECT_DIR$/src/react-test-task-app/utils/case-formatter.js" />
+        <option value="$PROJECT_DIR$/src/react-test-task-app/utils/validate-input.js" />
         <option value="$PROJECT_DIR$/src/react-test-task-app/react-test-task-app.js" />
       </list>
     </option>
@@ -230,6 +259,13 @@
               <item name="react-test-task-app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="react-test-task" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-test-task" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="react-test-task-app" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -272,33 +308,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526980806421</updated>
-      <workItem from="1526980810954" duration="21237000" />
+      <workItem from="1526980810954" duration="24418000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21237000" />
+    <option name="totallyTimeSpent" value="24418000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23658872" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23658872" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -483,81 +519,97 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/react-test-task-app/components/app-header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
           <folding>
-            <marker date="1526985599149" expanded="true" signature="211:656" ph="..." />
-            <marker date="1526985599149" expanded="true" signature="227:315" ph="{...}" />
-            <marker date="1526985599149" expanded="true" signature="340:527" ph="{...}" />
-            <marker date="1526985599149" expanded="true" signature="548:642" ph="{...}" />
-            <marker date="1526985599149" expanded="true" signature="678:732" ph="..." />
+            <marker date="1527094158065" expanded="true" signature="261:706" ph="..." />
+            <marker date="1527094158065" expanded="true" signature="277:365" ph="{...}" />
+            <marker date="1527094158065" expanded="true" signature="390:577" ph="{...}" />
+            <marker date="1527094158065" expanded="true" signature="598:692" ph="{...}" />
+            <marker date="1527094158065" expanded="true" signature="728:782" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/react-test-task-app/components/form-field.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <marker date="1527027858945" expanded="true" signature="161:2319" ph="..." />
-            <marker date="1527027858945" expanded="true" signature="177:342" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="366:454" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="479:678" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="728:765" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="822:859" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="901:985" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="1018:1054" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="1087:1290" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="1331:1387" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="1427:1672" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="1697:1875" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="1900:2131" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="2163:2225" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="2256:2305" ph="{...}" />
-            <marker date="1527027858945" expanded="true" signature="2365:3155" ph="..." />
-            <marker date="1527027858945" expanded="true" signature="2419:3037" ph="..." />
-            <marker date="1527027858945" expanded="true" signature="2503:2552" ph="..." />
-            <marker date="1527027858945" expanded="true" signature="2593:3022" ph="..." />
-            <marker date="1527027858945" expanded="true" signature="3070:3142" ph="..." />
+            <marker date="1527094158067" expanded="true" signature="249:2433" ph="..." />
+            <marker date="1527094158067" expanded="true" signature="265:456" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="480:568" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="593:792" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="842:879" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="936:973" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="1015:1099" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="1132:1168" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="1201:1404" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="1445:1501" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="1541:1786" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="1811:1989" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="2014:2245" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="2277:2339" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="2370:2419" ph="{...}" />
+            <marker date="1527094158067" expanded="true" signature="2479:3269" ph="..." />
+            <marker date="1527094158067" expanded="true" signature="2533:3151" ph="..." />
+            <marker date="1527094158067" expanded="true" signature="2617:2666" ph="..." />
+            <marker date="1527094158067" expanded="true" signature="2707:3136" ph="..." />
+            <marker date="1527094158067" expanded="true" signature="3184:3256" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/react-test-task-app/components/form-validator.js">
+    <entry file="file://$PROJECT_DIR$/src/react-test-task-app/components/form-wrapper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="-527">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="24" />
           <folding>
             <element signature="e#0#75#0" expanded="true" />
-            <marker date="1527027910957" expanded="true" signature="601:751" ph="..." />
-            <marker date="1527027910957" expanded="true" signature="617:737" ph="{...}" />
+            <marker date="1527094158056" expanded="true" signature="396:546" ph="..." />
+            <marker date="1527094158056" expanded="true" signature="412:532" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/react-test-task-app/react-test-task-app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        <state relative-caret-position="470">
+          <caret line="60" column="50" lean-forward="true" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
           <folding>
             <element signature="e#0#75#0" expanded="true" />
-            <marker date="1527027923332" expanded="true" signature="430:635" ph="..." />
-            <marker date="1527027923332" expanded="true" signature="446:483" ph="{...}" />
-            <marker date="1527027923332" expanded="true" signature="512:555" ph="{...}" />
-            <marker date="1527027923332" expanded="true" signature="582:621" ph="{...}" />
-            <marker date="1527027923332" expanded="true" signature="744:1282" ph="..." />
-            <marker date="1527027923332" expanded="true" signature="781:1114" ph="..." />
-            <marker date="1527027923332" expanded="true" signature="781:1258" ph="..." />
-            <marker date="1527027923332" expanded="true" signature="1189:1242" ph="..." />
+            <marker date="1527096032811" expanded="true" signature="387:592" ph="..." />
+            <marker date="1527096032811" expanded="true" signature="403:440" ph="{...}" />
+            <marker date="1527096032811" expanded="true" signature="469:512" ph="{...}" />
+            <marker date="1527096032811" expanded="true" signature="539:578" ph="{...}" />
+            <marker date="1527096032811" expanded="true" signature="699:1239" ph="..." />
+            <marker date="1527096032811" expanded="true" signature="736:1073" ph="..." />
+            <marker date="1527096032811" expanded="true" signature="736:1217" ph="..." />
+            <marker date="1527096032811" expanded="true" signature="1148:1201" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/react-test-task-app/utils/case-formatter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/react-test-task-app/utils/validate-input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
