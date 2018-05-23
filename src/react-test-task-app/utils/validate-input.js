@@ -8,6 +8,8 @@ export function validateInput(defaultValue, input) {
 
     if (errors.required) {
       input.error = `${normalizedName} is required`;
+    } else if (errors.disallowed) {
+      input.error = `${normalizedName} has disallowed symbols (${input.disallowed.join(', ')})`
     } else if (errors) {
       input.error = `${normalizedName} format is invalid`;
     }

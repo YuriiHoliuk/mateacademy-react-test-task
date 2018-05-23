@@ -1,4 +1,5 @@
 import { PolymerElement, html } from '@polymer/polymer';
+import {validateInput} from "../utils/validate-input";
 
 /**
  * @customElement
@@ -156,6 +157,9 @@ export class FormField extends PolymerElement {
       pattern: String,
       min: String,
       max: String,
+      disallowed: {
+        type: Array,
+      },
       disabled: {
         type: Boolean,
         value: false
@@ -171,7 +175,8 @@ export class FormField extends PolymerElement {
         readOnly: true
       },
       value: String,
-      alwaysActiveLabel: Boolean
+      alwaysActiveLabel: Boolean,
+      validateOnChange: Boolean
     }
   }
 
@@ -184,6 +189,16 @@ export class FormField extends PolymerElement {
     if (this.required && !this.value) {
       this._setValid(false);
       return { required: true };
+    }
+
+    if (this.disallowed) {
+      const hasDisallowed = this.disallowed
+        .reduce((res, char) => this.value.includes(char) ? true : res, false);
+
+      if (hasDisallowed) {
+        this._setValid(false);
+        return { disallowed: true };
+      }
     }
 
     if (!this.inputElement.checkValidity()) {
@@ -213,6 +228,11 @@ export class FormField extends PolymerElement {
     event.stopPropagation();
 
     this.value = event.target.value;
+
+    if (this.validateOnChange) {
+      validateInput(this.valid, this);
+    }
+
     this.dispatchEvent(new CustomEvent('input', { detail: this.value }));
   }
 

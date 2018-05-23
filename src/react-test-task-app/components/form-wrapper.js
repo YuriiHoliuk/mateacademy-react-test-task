@@ -52,9 +52,7 @@ export class FormWrapper extends PolymerElement {
     });
 
     if (this.validateOnChange) {
-      this.inputs.forEach(input => {
-        input.addEventListener('input', () => validateInput(input.valid, input));
-      });
+      this.inputs.forEach(input => input.validateOnChange = true);
     }
   }
 
