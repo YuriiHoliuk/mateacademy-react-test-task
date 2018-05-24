@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca8d9dd3-2833-4052-936f-50e2492c2f3c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/react-test-task-app/components/radio-group.js" afterPath="$PROJECT_DIR$/src/react-test-task-app/components/radio-group.js" />
       <change beforePath="$PROJECT_DIR$/src/react-test-task-app/react-test-task-app.js" afterPath="$PROJECT_DIR$/src/react-test-task-app/react-test-task-app.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,22 +16,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="react-test-task-app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="react-test-task-app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/react-test-task-app/react-test-task-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="42" column="53" lean-forward="false" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+            <state relative-caret-position="304">
+              <caret line="64" column="80" lean-forward="false" selection-start-line="64" selection-start-column="80" selection-end-line="64" selection-end-column="80" />
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
-                <marker date="1527161776251" expanded="true" signature="468:694" ph="..." />
-                <marker date="1527161776251" expanded="true" signature="484:521" ph="{...}" />
-                <marker date="1527161776251" expanded="true" signature="571:614" ph="{...}" />
-                <marker date="1527161776251" expanded="true" signature="641:680" ph="{...}" />
-                <marker date="1527161776251" expanded="true" signature="801:1894" ph="..." />
-                <marker date="1527161776251" expanded="true" signature="838:1164" ph="..." />
-                <marker date="1527161776251" expanded="true" signature="838:1872" ph="..." />
-                <marker date="1527161776251" expanded="true" signature="1230:1395" ph="..." />
-                <marker date="1527161776251" expanded="true" signature="1803:1856" ph="..." />
+                <marker date="1527162313419" expanded="true" signature="468:694" ph="..." />
+                <marker date="1527162313419" expanded="true" signature="484:521" ph="{...}" />
+                <marker date="1527162313419" expanded="true" signature="571:614" ph="{...}" />
+                <marker date="1527162313419" expanded="true" signature="641:680" ph="{...}" />
+                <marker date="1527162313419" expanded="true" signature="801:1910" ph="..." />
+                <marker date="1527162313419" expanded="true" signature="838:1180" ph="..." />
+                <marker date="1527162313419" expanded="true" signature="838:1888" ph="..." />
+                <marker date="1527162313419" expanded="true" signature="1246:1411" ph="..." />
+                <marker date="1527162313419" expanded="true" signature="1819:1872" ph="..." />
               </folding>
             </state>
           </provider>
@@ -58,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="radio-group.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="radio-group.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/react-test-task-app/components/radio-group.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-635">
-              <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="-1061">
+              <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
                 <marker date="1527161975352" expanded="true" signature="373:697" ph="..." />
@@ -192,8 +191,8 @@
         <option value="$PROJECT_DIR$/src/react-test-task-app/components/form-wrapper.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/react-test-task-app/components/radio-button.js" />
-        <option value="$PROJECT_DIR$/src/react-test-task-app/react-test-task-app.js" />
         <option value="$PROJECT_DIR$/src/react-test-task-app/components/radio-group.js" />
+        <option value="$PROJECT_DIR$/src/react-test-task-app/react-test-task-app.js" />
       </list>
     </option>
   </component>
@@ -302,12 +301,12 @@
       <option name="presentableId" value="Default" />
       <updated>1526980806421</updated>
       <workItem from="1526980810954" duration="27691000" />
-      <workItem from="1527154008059" duration="5263000" />
+      <workItem from="1527154008059" duration="5571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32954000" />
+    <option name="totallyTimeSpent" value="33262000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -349,15 +348,15 @@
           <caret line="51" column="6" lean-forward="false" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
           <folding>
             <element signature="e#0#75#0" expanded="true" />
-            <marker date="1527161776251" expanded="true" signature="468:694" ph="..." />
-            <marker date="1527161776251" expanded="true" signature="484:521" ph="{...}" />
-            <marker date="1527161776251" expanded="true" signature="571:614" ph="{...}" />
-            <marker date="1527161776251" expanded="true" signature="641:680" ph="{...}" />
-            <marker date="1527161776251" expanded="true" signature="801:1894" ph="..." />
-            <marker date="1527161776251" expanded="true" signature="838:1164" ph="..." />
-            <marker date="1527161776251" expanded="true" signature="838:1872" ph="..." />
-            <marker date="1527161776251" expanded="true" signature="1230:1395" ph="..." />
-            <marker date="1527161776251" expanded="true" signature="1803:1856" ph="..." />
+            <marker date="1527162313419" expanded="true" signature="468:694" ph="..." />
+            <marker date="1527162313419" expanded="true" signature="484:521" ph="{...}" />
+            <marker date="1527162313419" expanded="true" signature="571:614" ph="{...}" />
+            <marker date="1527162313419" expanded="true" signature="641:680" ph="{...}" />
+            <marker date="1527162313419" expanded="true" signature="801:1910" ph="..." />
+            <marker date="1527162313419" expanded="true" signature="838:1180" ph="..." />
+            <marker date="1527162313419" expanded="true" signature="838:1888" ph="..." />
+            <marker date="1527162313419" expanded="true" signature="1246:1411" ph="..." />
+            <marker date="1527162313419" expanded="true" signature="1819:1872" ph="..." />
           </folding>
         </state>
       </provider>
@@ -678,35 +677,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/react-test-task-app/react-test-task-app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="42" column="53" lean-forward="false" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#75#0" expanded="true" />
-            <marker date="1527161776251" expanded="true" signature="468:694" ph="..." />
-            <marker date="1527161776251" expanded="true" signature="484:521" ph="{...}" />
-            <marker date="1527161776251" expanded="true" signature="571:614" ph="{...}" />
-            <marker date="1527161776251" expanded="true" signature="641:680" ph="{...}" />
-            <marker date="1527161776251" expanded="true" signature="801:1894" ph="..." />
-            <marker date="1527161776251" expanded="true" signature="838:1164" ph="..." />
-            <marker date="1527161776251" expanded="true" signature="838:1872" ph="..." />
-            <marker date="1527161776251" expanded="true" signature="1230:1395" ph="..." />
-            <marker date="1527161776251" expanded="true" signature="1803:1856" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/react-test-task-app/components/radio-group.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-635">
-          <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+        <state relative-caret-position="-1061">
+          <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
             <marker date="1527161975352" expanded="true" signature="373:697" ph="..." />
             <marker date="1527161975352" expanded="true" signature="389:486" ph="{...}" />
             <marker date="1527161975352" expanded="true" signature="511:683" ph="{...}" />
             <marker date="1527161975352" expanded="true" signature="732:840" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/react-test-task-app/react-test-task-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="64" column="80" lean-forward="false" selection-start-line="64" selection-start-column="80" selection-end-line="64" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#75#0" expanded="true" />
+            <marker date="1527162313419" expanded="true" signature="468:694" ph="..." />
+            <marker date="1527162313419" expanded="true" signature="484:521" ph="{...}" />
+            <marker date="1527162313419" expanded="true" signature="571:614" ph="{...}" />
+            <marker date="1527162313419" expanded="true" signature="641:680" ph="{...}" />
+            <marker date="1527162313419" expanded="true" signature="801:1910" ph="..." />
+            <marker date="1527162313419" expanded="true" signature="838:1180" ph="..." />
+            <marker date="1527162313419" expanded="true" signature="838:1888" ph="..." />
+            <marker date="1527162313419" expanded="true" signature="1246:1411" ph="..." />
+            <marker date="1527162313419" expanded="true" signature="1819:1872" ph="..." />
           </folding>
         </state>
       </provider>
