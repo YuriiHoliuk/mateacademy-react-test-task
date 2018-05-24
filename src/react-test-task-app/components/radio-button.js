@@ -12,7 +12,7 @@ export class RadioButton extends PolymerElement {
   static get template() {
     return html`
       <label>
-        <input id="input" on-change="onChange" value="[[value]]" type="radio">
+        <input id="input" on-change="onChange" disabled="[[disabled]]" value="[[value]]" type="radio">
         [[label]]
       </label>
     `;
@@ -26,7 +26,8 @@ export class RadioButton extends PolymerElement {
         type: Boolean,
         observer: '_changeChecked',
         reflectToAttribute: true
-      }
+      },
+      disabled: Boolean
     };
   }
 

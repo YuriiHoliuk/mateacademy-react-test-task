@@ -195,7 +195,10 @@ export class FormField extends PolymerElement {
         value: true,
         readOnly: true
       },
-      value: String,
+      value: {
+        type: String,
+        value: ''
+      },
       alwaysActiveLabel: Boolean,
       validateOnChange: Boolean
     };

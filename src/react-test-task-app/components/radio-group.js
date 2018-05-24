@@ -16,14 +16,24 @@ export class RadioGroup extends PolymerElement {
     return html`
       <style>
         :host {
+          display: block;
           font-family: Arial, Verdana, sans-serif;
           --danger-color: #AB2430;
+        }
+        
+        .wrapper {
+          position: relative;
+          padding-bottom: 26px;
         }
         
         .error {
           font-size: 12px;
           line-height: 16px;
           color: var(--danger-color);
+          
+          position: absolute;
+          bottom: 0;
+          left: 0;
           
           margin: 0;
           padding: 5px 10px 5px 0;
@@ -51,13 +61,19 @@ export class RadioGroup extends PolymerElement {
       value: {
         type: String,
         observer: '_changeValue',
-        reflectToAttribute: true
+        value: ''
       },
+      error: String,
       required: Boolean,
       valid: {
         type: Boolean,
         value: true,
         readOnly: true
+      },
+      disabled: {
+        type: Boolean,
+        value: false,
+        observer: '_changeDisabled'
       },
       validateOnChange: Boolean
     };
@@ -77,6 +93,10 @@ export class RadioGroup extends PolymerElement {
 
     if (this.value) {
       this._checkByValue(this.value);
+    }
+
+    if (typeof this.disabled === 'boolean') {
+      this._changeDisabled(this.disabled);
     }
 
     this.listenInputs();
@@ -128,6 +148,12 @@ export class RadioGroup extends PolymerElement {
 
     this.value = value;
     this._checkByValue(value);
+  }
+
+  _changeDisabled(disabled) {
+    if (this.inputs) {
+      this.inputs.forEach(input => input.disabled = disabled);
+    }
   }
 
   _checkByValue(value) {

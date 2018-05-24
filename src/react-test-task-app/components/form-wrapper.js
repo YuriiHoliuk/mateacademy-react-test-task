@@ -63,10 +63,12 @@ export class FormWrapper extends PolymerElement {
   }
 
   serialize() {
-    return this.inputs.reduce((res, { name, value }) => {
-      res[name] = value;
-      return res;
-    }, {});
+    return this.inputs
+      .filter(_input => !_input.disabled)
+      .reduce((res, { name, value }) => {
+        res[name] = value;
+        return res;
+      }, {});
   }
 }
 
