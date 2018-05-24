@@ -112,12 +112,16 @@ export class FormField extends PolymerElement {
         .label.focused {
           color: var(--active-color);
         }
+        
+        .hidden {
+          display: none;
+        }
       </style>
 
       <div class$="[[wrapperClass(valid)]]">
         <div id="wrapper" class$="[[inputWrapperClass(focused)]]">
       
-          <label class$="[[labelClass(alwaysActiveLabel, focused, value)]]">
+          <label on-click="handleLabelClick" class$="[[labelClass(alwaysActiveLabel, focused, value)]]">
             [[_label(label)]]
           </label>
           
@@ -125,13 +129,12 @@ export class FormField extends PolymerElement {
                     required="[[required]]"
                     disabled="[[disabled]]"
                     name="[[name]]"
-                    hidden="[[_shouldRenderTextarea(type)]]"
                     value="[[value]]"
                     on-blur="handleBlur"
                     on-focus="handleFocus"
                     on-input="handleChange"
                     id="area"
-                    class="input"
+                    class$="[[areaClass(type)]]"
                     cols="[[cols]]"
                     rows="[[rows]]"></textarea>
     
@@ -140,7 +143,6 @@ export class FormField extends PolymerElement {
                  required="[[required]]"
                  disabled="[[disabled]]"
                  name="[[name]]"
-                 hidden="[[!_shouldRenderTextarea(type)]]"
                  min="[[min]]"
                  max="[[max]]"
                  value="[[value]]"
@@ -148,7 +150,7 @@ export class FormField extends PolymerElement {
                  on-focus="handleFocus"
                  on-input="handleChange"
                  id="input"
-                 class="input">
+                 class="[[inputClass(type)]]">
         </div>
     
         <div class="error">
@@ -245,6 +247,12 @@ export class FormField extends PolymerElement {
     return null;
   }
 
+  handleLabelClick() {
+    if (!this.focused) {
+      this.focused = true;
+    }
+  }
+
   handleFocus(event) {
     event.stopPropagation();
     this.focused = true;
@@ -271,13 +279,9 @@ export class FormField extends PolymerElement {
   }
 
   _changeFocused(focused) {
-    if (this.inputElement && this.inputElement.focus && this.inputElement.blur) {
+    if (this.inputElement) {
       focused ? this.inputElement.focus() : this.inputElement.blur();
     }
-  }
-
-  _shouldRenderTextarea(type) {
-    return type === 'textarea';
   }
 
   _label(label) {
@@ -296,5 +300,12 @@ export class FormField extends PolymerElement {
     return `label${focused ? ' focused' : ''}${alwaysActiveLabel || focused || !!value ? ' active' : ''}`;
   }
 
+  areaClass(type) {
+    return type === 'textarea' ? 'input' : 'hidden';
+  }
+
+  inputClass(type) {
+    return type !== 'textarea' ? 'input' : 'hidden';
+  }
 }
 customElements.define(FormField.is, FormField);

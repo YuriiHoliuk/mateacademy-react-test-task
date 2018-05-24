@@ -96,7 +96,10 @@ export class ModalWindow extends PolymerElement {
 
   static get properties() {
     return {
-      active: Boolean,
+      active: {
+        type: Boolean,
+        observer: '_changeActive'
+      },
       title: String
     };
   }
@@ -108,6 +111,12 @@ export class ModalWindow extends PolymerElement {
 
   prevent(event) {
     event.stopPropagation();
+  }
+
+  _changeActive(active) {
+    active
+      ? document.body.style.overflowY = 'hidden'
+      : document.body.style.overflowY = 'auto';
   }
 }
 
