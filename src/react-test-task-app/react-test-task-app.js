@@ -12,6 +12,8 @@ import { COUNTRIES } from "./constants/countries";
 import { DISALLOWED_SYMBOLS, EMAIL_REG_EX } from "./constants/validation";
 
 /**
+ * <react-test-task-app> Implements is wrapper for required by task form with validation
+ *
  * @customElement
  * @polymer
  */
@@ -89,6 +91,12 @@ class ReactTestTaskApp extends PolymerElement {
     this.modalIsOpened = false;
   };
 
+  /**
+  * Open modal when valid form is submitted
+   *
+   * @param {CustomEvent} event form value in details property
+   * @return void
+  * */
   onSubmit(event) {
     this.formValue = JSON.stringify(event.detail, null, 2);
     this.modalIsOpened = true;

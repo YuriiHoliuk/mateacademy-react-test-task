@@ -4,6 +4,13 @@ import { dom } from '@polymer/polymer/lib/legacy/polymer.dom.js';
 import { validateInput } from "../utils/validate-input";
 
 /**
+ * Wrapper for HTML <form> element
+ * requires to use custom form elements inside such as:
+ * ```form-field```, ```form-select```, ```radio-group```
+ *
+ * Perform form validation on submit by default
+ * Dispatch custom submit event if form is valid
+ *
  * @customElement
  * @polymer
  */
@@ -29,6 +36,11 @@ export class FormWrapper extends PolymerElement {
 
   static get properties() {
     return {
+      /**
+      * Set ```validateOnChange``` property for each control
+      *
+      * @type {boolean}
+      * */
       validateOnChange: {
         type: Boolean,
         value: false
@@ -56,12 +68,22 @@ export class FormWrapper extends PolymerElement {
     }
   }
 
+  /**
+  * Run validation for each control except disabled
+  *
+  * @return {boolean} form state (valid/invalid)
+  * */
   validate() {
     return this.inputs
       .filter(_input => !_input.disabled)
       .reduce(validateInput, true);
   }
 
+  /**
+  * Serialize form value to JS object except disabled controls
+  *
+  * @return {object} form value
+  * */
   serialize() {
     return this.inputs
       .filter(_input => !_input.disabled)
