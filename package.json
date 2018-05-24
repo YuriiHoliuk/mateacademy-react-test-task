@@ -3,7 +3,7 @@
   "description": "Form validation app for Mateacademy React course test task",
   "scripts": {
     "deploy": "polymer build && firebase deploy",
-    "generate:doc": "gulp doc"
+    "docs": "rm -rf ./docs && gulp doc && mv ./docs/gen ./gen && rm -rf docs && mv ./gen ./docs"
   },
   "dependencies": {
     "@polymer/polymer": "^3.0.0"

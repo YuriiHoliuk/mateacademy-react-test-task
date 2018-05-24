@@ -2,56 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca8d9dd3-2833-4052-936f-50e2492c2f3c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/AppHeader.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/FormField.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/FormWrapper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/ModalWindow.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/RadioButton.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/RadioGroup.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/ReactTestTaskApp.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/classes.list.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/img/glyphicons-halflings-white.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/img/glyphicons-halflings.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/quicksearch.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/scripts/docstrap.lib.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/scripts/fulltext-search-ui.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/scripts/fulltext-search.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/scripts/lunr.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/scripts/prettify/Apache-License-2.0.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/scripts/prettify/jquery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/scripts/prettify/lang-css.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/scripts/prettify/prettify.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/scripts/sunlight.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/scripts/toc.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/darkstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/prettify-tomorrow.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.cerulean.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.cosmo.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.cyborg.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.darkly.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.darkstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.dibs-bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.flatly.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.journal.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.lumen.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.paper.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.readable.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.sandstone.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.simplex.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.slate.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.spacelab.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.superhero.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.united.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/site.yeti.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/sunlight.dark.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/gen/styles/sunlight.default.css" afterPath="" />
       <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -92,8 +42,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state relative-caret-position="75">
+              <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -254,6 +204,22 @@
               <item name="build" type="462c0819:PsiDirectoryNode" />
               <item name="default" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="react-test-task" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-test-task" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-test-task" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-test-task" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-test-task" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-test-task" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="react-test-task-app" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -298,12 +264,12 @@
       <option name="presentableId" value="Default" />
       <updated>1526980806421</updated>
       <workItem from="1526980810954" duration="27691000" />
-      <workItem from="1527154008059" duration="19156000" />
+      <workItem from="1527154008059" duration="19321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46847000" />
+    <option name="totallyTimeSpent" value="47012000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -869,8 +835,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state relative-caret-position="75">
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
           <folding />
         </state>
       </provider>
