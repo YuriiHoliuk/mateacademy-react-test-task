@@ -5,6 +5,7 @@ const Cases = {
   NormalCase: 'normal',
 };
 
+// TODO: add other methods
 export class CaseFormatter {
   static getCase(word) {
     if (/ /.test(word)) {

@@ -6,9 +6,10 @@ import './components/form-field.js';
 import './components/radio-button.js';
 import './components/radio-group.js';
 import './components/form-select.js';
+import './components/modal-window.js';
 
-import {COUNTRIES} from "./constants/countries";
-import {DISALLOWED_SYMBOLS, EMAIL_REG_EX} from "./constants/validation";
+import { COUNTRIES } from "./constants/countries";
+import { DISALLOWED_SYMBOLS, EMAIL_REG_EX } from "./constants/validation";
 
 /**
  * @customElement
@@ -20,6 +21,7 @@ class ReactTestTaskApp extends PolymerElement {
   }
 
   static get template() {
+    // TODO: add more styles
     return html`
       <style>
         :host {
@@ -44,7 +46,7 @@ class ReactTestTaskApp extends PolymerElement {
 
       <div class="content">
         <form-wrapper on-submit="onSubmit">
-          <form id="form" slot="form">
+          <form>
             <form-field name="firstName"required disallowed="[[disallowed]]" label="First name"></form-field>
             <form-field name="lastName" required disallowed="[[disallowed]]" label="Last name"></form-field>
             <form-field name="birthday" type="date" required max="[[today]]" label="Birthday" always-active-label></form-field>
@@ -56,7 +58,7 @@ class ReactTestTaskApp extends PolymerElement {
             
             <form-select name="country" required options="[[countries]]" label="Country"></form-select>
             
-            <form-field name="email" type="email" required disallowed="[[disallowed]]" pattern="[[emailRegEx]]" label="Email"></form-field>
+            <form-field name="email" type="text" required disallowed="[[disallowed]]" pattern="[[emailRegEx]]" label="Email"></form-field>
             <form-field name="password" type="password" required disallowed="[[disallowed]]" label="Password"></form-field>
             <form-field name="address" required disallowed="[[disallowed]]" label="Address"></form-field>
             
@@ -68,6 +70,11 @@ class ReactTestTaskApp extends PolymerElement {
           </form>
         </form-wrapper>
       </div>
+      
+      <modal-window active="[[modalIsOpened]]" title="Congratulation! Form pass validation.">
+        Form value is:
+        <pre>[[formValue]]</pre>
+      </modal-window>
     `;
   }
 
@@ -78,10 +85,13 @@ class ReactTestTaskApp extends PolymerElement {
     this.disallowed = DISALLOWED_SYMBOLS;
     this.today = new Date().toISOString().split('T')[0]; // TODO: make it better
     this.countries = COUNTRIES;
+    this.formValue = {};
+    this.modalIsOpened = false;
   };
 
   onSubmit(event) {
-    console.log(event.detail);
+    this.formValue = JSON.stringify(event.detail, null, 2);
+    this.modalIsOpened = true;
   }
 }
 

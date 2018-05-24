@@ -1,4 +1,4 @@
-import {CaseFormatter} from "./case-formatter";
+import { CaseFormatter } from "./case-formatter";
 
 export function validateInput(defaultValue, input) {
   const errors = input.validate();

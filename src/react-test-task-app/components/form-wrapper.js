@@ -23,7 +23,7 @@ export class FormWrapper extends PolymerElement {
         }
       </style>
 
-      <slot name="form"></slot>
+      <slot></slot>
     `;
   }
 

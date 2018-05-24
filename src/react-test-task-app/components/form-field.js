@@ -1,6 +1,4 @@
 import { PolymerElement, html } from "../../../node_modules/@polymer/polymer/polymer-element.js";
-import { dom } from '@polymer/polymer/lib/legacy/polymer.dom.js';
-import '@polymer/polymer/lib/elements/dom-if.js';
 
 import { validateInput } from "../utils/validate-input.js";
 
@@ -117,42 +115,40 @@ export class FormField extends PolymerElement {
       </style>
 
       <div class$="[[wrapperClass(valid)]]">
-        <div class$="[[inputWrapperClass(focused)]]">
+        <div id="wrapper" class$="[[inputWrapperClass(focused)]]">
       
           <label class$="[[labelClass(alwaysActiveLabel, focused, value)]]">
             [[_label(label)]]
           </label>
           
-          <template is="dom-if" if="[[_shouldRenderTextarea(type)]]">
-            <textarea pattern="[[pattern]]"
-                      required="[[required]]"
-                      disabled="[[disabled]]"
-                      name="[[name]]"
-                      value="[[value]]"
-                      on-blur="handleBlur"
-                      on-focus="handleFocus"
-                      on-input="handleChange"
-                      id="input"
-                      class="input"
-                      cols="[[cols]]"
-                      rows="[[rows]]"></textarea>
-          </template>
-      
-          <template is="dom-if" if="[[!_shouldRenderTextarea(type)]]">
-            <input type="[[type]]"
-                   pattern="[[pattern]]"
-                   required="[[required]]"
-                   disabled="[[disabled]]"
-                   name="[[name]]"
-                   min="[[min]]"
-                   max="[[max]]"
-                   value="[[value]]"
-                   on-blur="handleBlur"
-                   on-focus="handleFocus"
-                   on-input="handleChange"
-                   id="input"
-                   class="input">
-          </template>
+          <textarea pattern="[[pattern]]"
+                    required="[[required]]"
+                    disabled="[[disabled]]"
+                    name="[[name]]"
+                    hidden="[[_shouldRenderTextarea(type)]]"
+                    value="[[value]]"
+                    on-blur="handleBlur"
+                    on-focus="handleFocus"
+                    on-input="handleChange"
+                    id="area"
+                    class="input"
+                    cols="[[cols]]"
+                    rows="[[rows]]"></textarea>
+    
+          <input type="[[type]]"
+                 pattern="[[pattern]]"
+                 required="[[required]]"
+                 disabled="[[disabled]]"
+                 name="[[name]]"
+                 hidden="[[!_shouldRenderTextarea(type)]]"
+                 min="[[min]]"
+                 max="[[max]]"
+                 value="[[value]]"
+                 on-blur="handleBlur"
+                 on-focus="handleFocus"
+                 on-input="handleChange"
+                 id="input"
+                 class="input">
         </div>
     
         <div class="error">
@@ -208,7 +204,11 @@ export class FormField extends PolymerElement {
 
   ready() {
     super.ready();
-    this.inputElement = dom(this).queryDistributedElements('#input');
+
+    // TODO: get element with dom-if
+    this.inputElement = this.type === 'textarea'
+      ? this.$.area
+      : this.$.input;
   }
 
   validate() {
@@ -232,7 +232,7 @@ export class FormField extends PolymerElement {
       }
     }
 
-    if (this.inputElement.checkValidity && !this.inputElement.checkValidity()) {
+    if (!this.inputElement.checkValidity()) {
       this._setValid(false);
 
       return {
