@@ -48,6 +48,8 @@ class ReactTestTaskApp extends PolymerElement {
           <form-field name="email" type="email" required disallowed="[[disallowed]]" pattern="[[emailRegEx]]" label="Email"></form-field>
           <form-field name="password" type="password" required disallowed="[[disallowed]]" label="Password"></form-field>
           <form-field name="address" required disallowed="[[disallowed]]" label="Address"></form-field>
+          
+          <form-field name="notes" type="textarea" label="Notes"></form-field>
 
           <div class="buttons">
             <button>Submit</button>

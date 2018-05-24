@@ -1,5 +1,8 @@
-import { PolymerElement, html } from '@polymer/polymer';
-import {validateInput} from "../utils/validate-input";
+import { PolymerElement, html } from "../../../node_modules/@polymer/polymer/polymer-element.js";
+import { dom } from '@polymer/polymer/lib/legacy/polymer.dom.js';
+import '@polymer/polymer/lib/elements/dom-if.js';
+
+import { validateInput } from "../utils/validate-input.js";
 
 /**
  * @customElement
@@ -21,7 +24,8 @@ export class FormField extends PolymerElement {
           --danger-color: #AB2430;
         }
         
-        input {
+        input,
+        textarea {
           border: none;
           background: none;
           outline: none;
@@ -118,20 +122,37 @@ export class FormField extends PolymerElement {
           <label class$="[[labelClass(alwaysActiveLabel, focused, value)]]">
             [[_label(label)]]
           </label>
+          
+          <template is="dom-if" if="[[_shouldRenderTextarea(type)]]">
+            <textarea pattern="[[pattern]]"
+                      required="[[required]]"
+                      disabled="[[disabled]]"
+                      name="[[name]]"
+                      value="[[value]]"
+                      on-blur="handleBlur"
+                      on-focus="handleFocus"
+                      on-input="handleChange"
+                      id="input"
+                      class="input"
+                      cols="30"
+                      rows="10"></textarea>
+          </template>
       
-          <input type="[[type]]"
-                 pattern="[[pattern]]"
-                 required="[[required]]"
-                 disabled="[[disabled]]"
-                 name="[[name]]"
-                 min="[[min]]"
-                 max="[[max]]"
-                 value="[[value]]"
-                 on-blur="handleBlur"
-                 on-focus="handleFocus"
-                 on-input="handleChange"
-                 id="input"
-                 class="input">
+          <template is="dom-if" if="[[!_shouldRenderTextarea(type)]]">
+            <input type="[[type]]"
+                   pattern="[[pattern]]"
+                   required="[[required]]"
+                   disabled="[[disabled]]"
+                   name="[[name]]"
+                   min="[[min]]"
+                   max="[[max]]"
+                   value="[[value]]"
+                   on-blur="handleBlur"
+                   on-focus="handleFocus"
+                   on-input="handleChange"
+                   id="input"
+                   class="input">
+          </template>
         </div>
     
         <div class="error">
@@ -158,7 +179,7 @@ export class FormField extends PolymerElement {
       min: String,
       max: String,
       disallowed: {
-        type: Array,
+        type: Array
       },
       disabled: {
         type: Boolean,
@@ -177,69 +198,81 @@ export class FormField extends PolymerElement {
       value: String,
       alwaysActiveLabel: Boolean,
       validateOnChange: Boolean
-    }
+    };
   }
 
   ready() {
     super.ready();
-    this.inputElement = this.$.input;
+    this.inputElement = dom(this).queryDistributedElements('#input');
   }
 
   validate() {
     if (this.required && !this.value) {
       this._setValid(false);
-      return { required: true };
+
+      return {
+        required: true
+      };
     }
 
     if (this.disallowed) {
-      const hasDisallowed = this.disallowed
-        .reduce((res, char) => this.value.includes(char) ? true : res, false);
+      const hasDisallowed = this.disallowed.reduce((res, char) => this.value.includes(char) ? true : res, false);
 
       if (hasDisallowed) {
         this._setValid(false);
-        return { disallowed: true };
+
+        return {
+          disallowed: true
+        };
       }
     }
 
-    if (!this.inputElement.checkValidity()) {
+    if (this.inputElement.checkValidity && !this.inputElement.checkValidity()) {
       this._setValid(false);
-      return { invalid: true };
+
+      return {
+        invalid: true
+      };
     }
 
     this._setValid(true);
+
     return null;
   }
 
   handleFocus(event) {
     event.stopPropagation();
-
     this.focused = true;
     this.dispatchEvent(new CustomEvent('focus'));
   }
 
   handleBlur(event) {
     event.stopPropagation();
-
     this.focused = false;
     this.dispatchEvent(new CustomEvent('blur'));
   }
 
   handleChange(event) {
     event.stopPropagation();
-
     this.value = event.target.value;
 
     if (this.validateOnChange) {
       validateInput(this.valid, this);
     }
 
-    this.dispatchEvent(new CustomEvent('input', { detail: this.value }));
+    this.dispatchEvent(new CustomEvent('input', {
+      detail: this.value
+    }));
   }
 
   _changeFocused(focused) {
-    if (this.inputElement) {
+    if (this.inputElement && this.inputElement.focus && this.inputElement.blur) {
       focused ? this.inputElement.focus() : this.inputElement.blur();
     }
+  }
+
+  _shouldRenderTextarea(type) {
+    return type === 'textarea';
   }
 
   _label(label) {
@@ -255,8 +288,8 @@ export class FormField extends PolymerElement {
   }
 
   labelClass(alwaysActiveLabel, focused, value) {
-    return `label${focused ? ' focused' : ''}${(alwaysActiveLabel || focused || !!value) ? ' active' : ''}`;
+    return `label${focused ? ' focused' : ''}${alwaysActiveLabel || focused || !!value ? ' active' : ''}`;
   }
-}
 
+}
 customElements.define(FormField.is, FormField);
