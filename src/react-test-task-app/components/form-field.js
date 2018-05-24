@@ -134,8 +134,8 @@ export class FormField extends PolymerElement {
                       on-input="handleChange"
                       id="input"
                       class="input"
-                      cols="30"
-                      rows="10"></textarea>
+                      cols="[[cols]]"
+                      rows="[[rows]]"></textarea>
           </template>
       
           <template is="dom-if" if="[[!_shouldRenderTextarea(type)]]">
@@ -190,6 +190,8 @@ export class FormField extends PolymerElement {
         observer: '_changeFocused',
         value: false
       },
+      rows: Number,
+      cols: Number,
       valid: {
         type: Boolean,
         value: true,

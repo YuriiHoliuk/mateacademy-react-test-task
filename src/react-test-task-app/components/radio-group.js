@@ -38,10 +38,14 @@ export class RadioGroup extends PolymerElement {
           margin: 0;
           padding: 5px 10px 5px 0;
         }
+        
+        .label.invalid {
+          color: var(--danger-color);
+        }
       </style>
       
       <div class="wrapper">
-        <p>[[_label(label)]]:</p>
+        <p class$="[[labelClass(valid)]]">[[_label(label)]]:</p>
         <slot></slot>
         <p class="error">[[error]]</p>
       </div>
@@ -162,6 +166,10 @@ export class RadioGroup extends PolymerElement {
 
   _uncheckAll() {
     this.inputs.forEach(input => input.checked = false);
+  }
+
+  labelClass(valid) {
+    return `label${!valid ? ' invalid' : ''}`;
   }
 }
 

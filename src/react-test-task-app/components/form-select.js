@@ -1,6 +1,7 @@
 import { PolymerElement, html } from '@polymer/polymer';
 import '@polymer/polymer/lib/elements/dom-repeat';
-import {validateInput} from "../utils/validate-input";
+
+import { validateInput } from "../utils/validate-input";
 
 export class FormSelect extends PolymerElement {
   static get is() {
@@ -33,12 +34,16 @@ export class FormSelect extends PolymerElement {
           margin: 0;
           padding: 5px 10px 5px 0;
         }
+        
+        .label.invalid {
+          color: var(--danger-color);
+        }
       </style>
 
       <div class="wrapper">
-        <p>[[_label(label)]]</p>
+        <p class$="[[labelClass(valid)]]">[[_label(label)]]</p>
         
-        <select name="[[name]]" disabled="[[disabled]]" id="select" on-change="onChange">
+        <select name="[[name]]" disabled="[[disabled]]" on-change="onChange">
           <option value="" selected disabled hidden>Choose [[label]]</option>
           
           <dom-repeat items="[[options]]">
@@ -74,12 +79,6 @@ export class FormSelect extends PolymerElement {
     }
   }
 
-  ready() {
-    super.ready();
-
-    console.log(this.options);
-  }
-
   validate() {
     if (this.required && !this.value) {
       this._setValid(false);
@@ -107,6 +106,10 @@ export class FormSelect extends PolymerElement {
 
   _selected(value) {
     return value === this.value;
+  }
+
+  labelClass(valid) {
+    return `label${!valid ? ' invalid' : ''}`;
   }
 }
 
