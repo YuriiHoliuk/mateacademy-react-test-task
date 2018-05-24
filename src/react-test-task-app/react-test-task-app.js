@@ -27,11 +27,36 @@ class ReactTestTaskApp extends PolymerElement {
     return html`
       <style>
         :host {
-          display: block;
+          font-family: Arial, Verdana, sans-serif;
+          
+          display: grid;
+          grid-template-rows: 60px 1fr;
+          grid-template-columns: 150px 1fr;
+          grid-template-areas: "header header"
+                               "sidebar content";
+          grid-gap: 20px;
+        }
+        
+        h2 {
+          margin: 0;
+        }
+        
+        app-header {
+          grid-area: header;
         }
         
         .content {
-          padding-bottom: 50px;
+          grid-area: content;
+          padding-right: 20px;
+        }
+        
+        .sidebar {
+          grid-area: sidebar;
+          padding-left: 20px;
+        }
+        
+        .sub-headline {
+          margin-bottom: 20px;
         }
         
         form-field,
@@ -42,12 +67,32 @@ class ReactTestTaskApp extends PolymerElement {
         .buttons {
           margin-top: 40px;
         }
+        
+        @media only screen and (max-width: 640px) {
+          :host {
+            grid-template-rows: 9.375vw 1fr; 
+          }
+          
+          .sub-headline {
+            font-size: 16px;
+          }
+        }
       </style>
       
-      <app-header></app-header>
+      <app-header title="Polymer 3.0 fom validation app"></app-header>
+      
+      <div class="sidebar">
+        <h2 class="sub-headline">Options:</h2>
+
+        <label>
+          Validate form on change
+          <input type="checkbox" on-change="toggleValidateOnChange">
+        </label>
+      </div>
 
       <div class="content">
-        <form-wrapper on-submit="onSubmit">
+        <h2 class="sub-headline">Form:</h2>
+        <form-wrapper validate-on-change="[[validateOnChange]]" on-submit="onSubmit">
           <form>
             <form-field name="firstName"required disallowed="[[disallowed]]" label="First name"></form-field>
             <form-field name="lastName" required disallowed="[[disallowed]]" label="Last name"></form-field>
@@ -91,6 +136,7 @@ class ReactTestTaskApp extends PolymerElement {
 
     this.formValue = {};
     this.modalIsOpened = false;
+    this.validateOnChange = false;
   };
 
   /**
@@ -102,6 +148,16 @@ class ReactTestTaskApp extends PolymerElement {
   onSubmit(event) {
     this.formValue = JSON.stringify(event.detail, null, 2);
     this.modalIsOpened = true;
+  }
+
+  /**
+  * Change form-wrapper ```validateOnChange``` property
+   *
+   * @param {Event} event
+  * */
+  toggleValidateOnChange(event) {
+    console.log(event.target.checked);
+    this.validateOnChange = event.target.checked;
   }
 }
 

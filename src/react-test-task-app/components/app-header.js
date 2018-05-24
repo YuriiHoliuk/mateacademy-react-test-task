@@ -15,11 +15,14 @@ class AppHeader extends PolymerElement {
         :host {
           display: block;
           font-family: Arial, Verdana, sans-serif;
+          font-size: 32px;
         }
         
         header {
-          min-height: 60px;
-          padding: 0 40px;
+          font-size: inherit;
+          
+          min-height: 1.875em;
+          padding: 0 1.25em;
           
           background-color: lightskyblue;
           color: white;
@@ -27,16 +30,29 @@ class AppHeader extends PolymerElement {
         }
         
         h1 {
+          font-size: inherit;
           max-width: 960px;
           margin: 0 auto;
-          line-height: 60px;
+          line-height: 1.875;
+        }
+        
+        @media only screen and (max-width: 640px) {
+          :host {
+            font-size: 5vw;
+          }
         }
       </style>
       
       <header>
-        <h1>Form with validation</h1>
+        <h1>[[title]]</h1>
       </header>
     `;
+  }
+
+  static get properties() {
+    return {
+      title: String
+    };
   }
 }
 

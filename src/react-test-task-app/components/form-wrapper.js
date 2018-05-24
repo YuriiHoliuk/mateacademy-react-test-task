@@ -30,9 +30,6 @@ export class FormWrapper extends PolymerElement {
       <style>
         :host {
           display: block;
-          max-width: 640px;
-          margin: 0 auto;
-          padding-top: 40px;
         }
       </style>
 
@@ -49,7 +46,8 @@ export class FormWrapper extends PolymerElement {
       * */
       validateOnChange: {
         type: Boolean,
-        value: false
+        value: false,
+        observer: '_changeValidateOnChange'
       }
     };
   }
@@ -94,6 +92,12 @@ export class FormWrapper extends PolymerElement {
     return this.inputs
       .filter(_input => !_input.disabled)
       .reduce((res, { name, value }) => ({ ...res, [name]: value }), {});
+  }
+
+  _changeValidateOnChange(validateOnChange) {
+    if (this.inputs) {
+      this.inputs.forEach(input => input.validateOnChange = validateOnChange);
+    }
   }
 }
 
