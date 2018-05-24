@@ -2,7 +2,8 @@
   "name": "react-test-task",
   "description": "Form validation app for Mateacademy React course test task",
   "scripts": {
-    "deploy": "polymer build && firebase deploy"
+    "deploy": "polymer build && firebase deploy",
+    "generate:doc": "gulp doc"
   },
   "dependencies": {
     "@polymer/polymer": "^3.0.0"
