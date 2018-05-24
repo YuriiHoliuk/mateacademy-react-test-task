@@ -1,6 +1,6 @@
 {
-  "name": "react-test-task",
-  "description": "Form validation app for Mateacademy React course test task",
+  "name": "react-test-task-app",
+  "description": "Form validation app for Mate academy React course test task",
   "scripts": {
     "deploy": "polymer build && firebase deploy",
     "docs": "rm -rf ./docs && gulp doc && mv ./docs/gen ./gen && rm -rf docs && mv ./gen ./docs",

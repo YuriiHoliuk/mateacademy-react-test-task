@@ -85,8 +85,10 @@ class ReactTestTaskApp extends PolymerElement {
 
     this.emailRegEx = EMAIL_REG_EX;
     this.disallowed = DISALLOWED_SYMBOLS;
-    this.today = new Date().toISOString().split('T')[0]; // TODO: make it better
     this.countries = COUNTRIES;
+
+    this.today = new Date().toISOString().split('T')[0]; // TODO: make it better
+
     this.formValue = {};
     this.modalIsOpened = false;
   };

@@ -8,7 +8,13 @@ import { validateInput } from "../utils/validate-input";
  * requires to use custom form elements inside such as:
  * ```form-field```, ```form-select```, ```radio-group```
  *
+ * Controls should have next required API:
+ * - ```name``` property - should be unique within the form
+ * - ```error``` property - for setting validation errors
+ * - ```validate()``` method that @return errors object OR ```null``` if validation passed
+ *
  * Perform form validation on submit by default
+ *
  * Dispatch custom submit event if form is valid
  *
  * @customElement
@@ -37,7 +43,7 @@ export class FormWrapper extends PolymerElement {
   static get properties() {
     return {
       /**
-      * Set ```validateOnChange``` property for each control
+      * FormWrapper: Set ```validateOnChange``` property for each control
       *
       * @type {boolean}
       * */
@@ -87,10 +93,7 @@ export class FormWrapper extends PolymerElement {
   serialize() {
     return this.inputs
       .filter(_input => !_input.disabled)
-      .reduce((res, { name, value }) => {
-        res[name] = value;
-        return res;
-      }, {});
+      .reduce((res, { name, value }) => ({ ...res, [name]: value }), {});
   }
 }
 

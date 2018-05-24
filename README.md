@@ -1,6 +1,21 @@
-# \<react-test-task\>
+# \<react-test-task-app\>
 
-Form validation app for Mateacademy React course test task
+Form validation app for Mate academy React course test task
+
+## Preview
+
+View working project [WebComponents form validation](https://mateacademy-react-test-task.firebaseapp.com)
+
+Also, you can read docs [here](https://yuriiholiuk.github.io/mateacademy-react-test-task)
+
+## TODO:
+- Complete docs
+- Write tests
+- Add webpack(or another method) to build polymer doc OR generate correct params doc by current gulp plugin
+- Create another polymer elements project for reusable components
+- Style button or create custom button
+- Add custom styles to select & radio controls
+- Create separate component for textarea
 
 ## Install the Polymer-CLI
 
@@ -23,6 +38,31 @@ This will create builds of your application in the `build/` directory, optimized
 ```
 $ polymer serve build/default
 ```
+
+## Build Documentation
+
+Create JSDoc documentation by gulp plugin in ```/docs``` folder
+
+```
+$ npm run docs
+```
+
+Create documentation based on Polymer ```<iron-component-page>``` - in progress
+
+```
+$ npm run docs:polymer
+```
+
+## Deploy Project
+
+Deploy main project to firebase
+You need setup firebase project before
+
+```
+$ npm run deploy
+```
+
+Run ```git push origin <branch_name>:master``` to deploy docs to GitHub Pages 
 
 ## Running Tests
 

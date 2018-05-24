@@ -3,6 +3,17 @@ import { PolymerElement, html } from "../../../node_modules/@polymer/polymer/pol
 import { validateInput } from "../utils/validate-input.js";
 
 /**
+ * ### Wrapper for text input
+ *
+ * Also, support ```date```, ```email```, ```password```, ```number``` inputs and ```<textarea>```
+ * Maybe support another types of inputs but not tested.
+ *
+ * Re-dispatch input\`s ```input```, ```focus```, ```blur``` events
+ *
+ * Can render floated label and error message
+ *
+ * Implements required API for ```<form-wrapper>```
+ *
  * @customElement
  * @polymer
  */
@@ -118,10 +129,10 @@ export class FormField extends PolymerElement {
         }
       </style>
 
-      <div class$="[[wrapperClass(valid)]]">
-        <div id="wrapper" class$="[[inputWrapperClass(focused)]]">
+      <div class$="[[_wrapperClass(valid)]]">
+        <div id="wrapper" class$="[[_inputWrapperClass(focused)]]">
       
-          <label on-click="handleLabelClick" class$="[[labelClass(alwaysActiveLabel, focused, value)]]">
+          <label on-click="handleLabelClick" class$="[[_labelClass(alwaysActiveLabel, focused, value)]]">
             [[_label(label)]]
           </label>
           
@@ -134,7 +145,7 @@ export class FormField extends PolymerElement {
                     on-focus="handleFocus"
                     on-input="handleChange"
                     id="area"
-                    class$="[[areaClass(type)]]"
+                    class$="[[_areaClass(type)]]"
                     cols="[[cols]]"
                     rows="[[rows]]"></textarea>
     
@@ -150,7 +161,7 @@ export class FormField extends PolymerElement {
                  on-focus="handleFocus"
                  on-input="handleChange"
                  id="input"
-                 class="[[inputClass(type)]]">
+                 class$="[[_inputClass(type)]]">
         </div>
     
         <div class="error">
@@ -213,6 +224,15 @@ export class FormField extends PolymerElement {
       : this.$.input;
   }
 
+  /**
+  * Perform three validation types:
+   *
+   * - required
+   * - check disallowed symbols
+   * - HTML validation (by pattern, min, max etc.)
+  *
+  * @return {object} ```{ [errorType: string]: boolean }``` OR ```null``` if validation passed
+  * */
   validate() {
     if (this.required && !this.value) {
       this._setValid(false);
@@ -247,24 +267,40 @@ export class FormField extends PolymerElement {
     return null;
   }
 
+  /**
+  * Focus input on label click
+  * */
   handleLabelClick() {
     if (!this.focused) {
       this.focused = true;
     }
   }
 
+  /**
+  * - change ```focused``` property
+   * - redispatch event
+  * */
   handleFocus(event) {
     event.stopPropagation();
     this.focused = true;
     this.dispatchEvent(new CustomEvent('focus'));
   }
 
+  /**
+   * - change ```focused``` property
+   * - redispatch event
+   * */
   handleBlur(event) {
     event.stopPropagation();
     this.focused = false;
     this.dispatchEvent(new CustomEvent('blur'));
   }
 
+  /**
+   * Set element value, validate it and redispatch ```input``` event
+   *
+   * ```event.detail``` contains control value
+   * */
   handleChange(event) {
     event.stopPropagation();
     this.value = event.target.value;
@@ -277,34 +313,39 @@ export class FormField extends PolymerElement {
       detail: this.value
     }));
   }
-
+  /**
+   * Observer: toggle input focus when ```focused``` property changed
+   * */
   _changeFocused(focused) {
     if (this.inputElement) {
       focused ? this.inputElement.focus() : this.inputElement.blur();
     }
   }
 
+  /**
+  * Add asterisk(```*```) to label if field is required
+  * */
   _label(label) {
     return `${label}${label && this.required ? '*' : ''}`;
   }
 
-  wrapperClass(valid) {
+  _wrapperClass(valid) {
     return `wrapper${valid ? '' : ' invalid'}`;
   }
 
-  inputWrapperClass(focused) {
+  _inputWrapperClass(focused) {
     return `input-wrapper${focused ? ' focused' : ''}`;
   }
 
-  labelClass(alwaysActiveLabel, focused, value) {
+  _labelClass(alwaysActiveLabel, focused, value) {
     return `label${focused ? ' focused' : ''}${alwaysActiveLabel || focused || !!value ? ' active' : ''}`;
   }
 
-  areaClass(type) {
+  _areaClass(type) {
     return type === 'textarea' ? 'input' : 'hidden';
   }
 
-  inputClass(type) {
+  _inputClass(type) {
     return type !== 'textarea' ? 'input' : 'hidden';
   }
 }
