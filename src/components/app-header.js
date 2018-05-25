@@ -1,6 +1,10 @@
 import { html, PolymerElement } from '@polymer/polymer/polymer-element.js';
 
 /**
+ * Simple dumb header element
+ *
+ * Render passed title
+ *
  * @customElement
  * @polymer
  */

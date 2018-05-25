@@ -39,11 +39,6 @@ export class FormWrapper extends PolymerElement {
 
   static get properties() {
     return {
-      /**
-      * FormWrapper: Set ```validateOnChange``` property for each control
-      *
-      * @type {boolean}
-      * */
       validateOnChange: {
         type: Boolean,
         value: false,

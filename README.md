@@ -9,13 +9,13 @@ View working project [WebComponents form validation](https://mateacademy-react-t
 Also, you can read docs [here](https://yuriiholiuk.github.io/mateacademy-react-test-task)
 
 ## TODO:
-- Complete docs
 - Write tests
 - Add webpack(or another method) to build polymer doc OR generate correct params doc by current gulp plugin
 - Create another polymer elements project for reusable components
 - Style button or create custom button
 - Add custom styles to select & radio controls
 - Create separate component for textarea
+- Switch to typescript
 
 ## Install the Polymer-CLI
 

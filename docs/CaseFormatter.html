@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Class: ReactTestTaskApp</title>
+	<title>Documentation Class: CaseFormatter</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,18 +72,17 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: ReactTestTaskApp</h1>
+	<h1 class="page-title">Class: CaseFormatter</h1>
 <section>
 
 <header>
     
         <h2>
-        ReactTestTaskApp
+        CaseFormatter
         </h2>
         
-            <div class="class-description"><p><react-test-task-app> Implements wrapper for required by task form with validation</p>
-<p>Based on grid layout</p>
-<p>Render header with title, sidebar with options(validateOnChange currently), and form</p></div>
+            <div class="class-description"><p>Has static methods for transforming strings from one case to another</p>
+<p>TODO: implements rest methods</p></div>
         
     
 </header>
@@ -95,7 +94,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="ReactTestTaskApp"><span class="type-signature"></span>new ReactTestTaskApp()</h4>
+    <h4 class="name" id="CaseFormatter"><span class="type-signature"></span>new CaseFormatter()</h4>
     
     
 </dt>
@@ -187,7 +186,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="onSubmit"><span class="type-signature"></span>onSubmit(event)</h4>
+    <h4 class="name" id=".camelToNormal"><span class="type-signature">&lt;static> </span>camelToNormal(word, capitalize)</h4>
     
     
 </dt>
@@ -195,7 +194,7 @@
 
     
     <div class="description">
-        <p>Open modal when valid form is submitted</p>
+        <p>Convert camelCase to normal Case</p>
     </div>
     
 
@@ -220,6 +219,8 @@
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -230,13 +231,13 @@
 
         <tr>
             
-                <td class="name"><code>event</code></td>
+                <td class="name"><code>word</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">CustomEvent</span>
+<span class="param-type">string</span>
 
 
 
@@ -246,8 +247,42 @@
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
-            <td class="description last"><p>form value in details property</p></td>
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>capitalize</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p>capitalize first letter if true (default = true)</p></td>
         </tr>
 
     
@@ -310,11 +345,20 @@
     <h5>Returns:</h5>
     
             
-<div class="param-desc">
-    <p>void</p>
-</div>
 
 
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
 
 
         
@@ -326,7 +370,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="toggleValidateOnChange"><span class="type-signature"></span>toggleValidateOnChange(event)</h4>
+    <h4 class="name" id=".getCase"><span class="type-signature">&lt;static> </span>getCase(word)</h4>
     
     
 </dt>
@@ -334,7 +378,7 @@
 
     
     <div class="description">
-        <p>Change form-wrapper <code>validateOnChange</code> property</p>
+        <p>Determines case type of string</p>
     </div>
     
 
@@ -369,13 +413,13 @@
 
         <tr>
             
-                <td class="name"><code>event</code></td>
+                <td class="name"><code>word</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Event</span>
+<span class="param-type">string</span>
 
 
 
@@ -446,6 +490,30 @@
     
 
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p><code>'kebab' | 'camel' | 'snake' | 'normal'</code></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
 
     
 </dd>

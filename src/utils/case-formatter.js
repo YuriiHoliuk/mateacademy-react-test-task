@@ -5,8 +5,19 @@ const Cases = {
   NormalCase: 'normal',
 };
 
-// TODO: add other methods
+/**
+* Has static methods for transforming strings from one case to another
+*
+ * TODO: implements rest methods
+* */
 export class CaseFormatter {
+  /**
+  * Determines case type of string
+   *
+   * @param {string} word
+   *
+   * @return {string} ```'kebab' | 'camel' | 'snake' | 'normal'```
+  * */
   static getCase(word) {
     if (/ /.test(word)) {
       return Cases.NormalCase;
@@ -22,6 +33,14 @@ export class CaseFormatter {
     }
   }
 
+  /**
+  * Convert camelCase to normal Case
+  *
+   * @param {string} word
+   * @param {boolean} capitalize capitalize first letter if true (default = true)
+   *
+   * @return {string}
+  * */
   static camelToNormal(word, capitalize = true) {
     const withSpaces = word.replace(/([A-Z])+/g, ' $1');
     return capitalize

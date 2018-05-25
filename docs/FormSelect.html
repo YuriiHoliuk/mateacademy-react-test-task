@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Class: ReactTestTaskApp</title>
+	<title>Documentation Class: FormSelect</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,18 +72,20 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: ReactTestTaskApp</h1>
+	<h1 class="page-title">Class: FormSelect</h1>
 <section>
 
 <header>
     
         <h2>
-        ReactTestTaskApp
+        FormSelect
         </h2>
         
-            <div class="class-description"><p><react-test-task-app> Implements wrapper for required by task form with validation</p>
-<p>Based on grid layout</p>
-<p>Render header with title, sidebar with options(validateOnChange currently), and form</p></div>
+            <div class="class-description"><p>Wrapper for select</p>
+<p>Validate value if have required property</p>
+<p>Render label and error message</p>
+<p>Receive options in format <code>Array&lt;{ value: string, label: string }&gt;</code></p>
+<p>Implements required API for <code>&lt;form-wrapper&gt;</code></p></div>
         
     
 </header>
@@ -95,7 +97,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="ReactTestTaskApp"><span class="type-signature"></span>new ReactTestTaskApp()</h4>
+    <h4 class="name" id="FormSelect"><span class="type-signature"></span>new FormSelect()</h4>
     
     
 </dt>
@@ -187,7 +189,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="onSubmit"><span class="type-signature"></span>onSubmit(event)</h4>
+    <h4 class="name" id="onChange"><span class="type-signature"></span>onChange()</h4>
     
     
 </dt>
@@ -195,7 +197,8 @@
 
     
     <div class="description">
-        <p>Open modal when valid form is submitted</p>
+        <p>Handle and redispatch select change event</p>
+<p>Validate value if <code>validateOnChange === true</code></p>
     </div>
     
 
@@ -205,55 +208,83 @@
 
     
     
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>event</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">CustomEvent</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>form value in details property</p></td>
-        </tr>
 
     
-    </tbody>
-</table>
+<dl class="details">
+    
 
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="validate"><span class="type-signature"></span>validate()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Perform required validation</p>
+    </div>
+    
+
+    
+
+    
+
+    
     
 
     
@@ -311,141 +342,26 @@
     
             
 <div class="param-desc">
-    <p>void</p>
+    <p><code>{ [errorType: string]: boolean }</code> OR <code>null</code> if validation passed</p>
 </div>
 
 
 
-
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
         
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="toggleValidateOnChange"><span class="type-signature"></span>toggleValidateOnChange(event)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Change form-wrapper <code>validateOnChange</code> property</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>event</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Event</span>
+<span class="param-type">object</span>
 
 
 
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
+    </dd>
 </dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+        
 
     
 </dd>

@@ -1,0 +1,50 @@
+:host {
+    font-family: Arial, Verdana, sans-serif;
+
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 150px 1fr;
+    grid-template-areas: "header header" "sidebar content";
+    grid-gap: 20px;
+}
+
+h2 {
+    margin: 0;
+}
+
+app-header {
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+    padding-right: 20px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding-left: 20px;
+}
+
+.sub-headline {
+    margin-bottom: 20px;
+}
+
+form-field,
+radio-group {
+    padding-bottom: 10px;
+}
+
+.buttons {
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 640px) {
+    :host {
+        grid-template-rows: 9.375vw 1fr;
+    }
+
+    .sub-headline {
+        font-size: 16px;
+    }
+}

@@ -12,7 +12,11 @@ import { COUNTRIES } from "./constants/countries";
 import { DISALLOWED_SYMBOLS, EMAIL_REG_EX } from "./constants/validation";
 
 /**
- * <react-test-task-app> Implements is wrapper for required by task form with validation
+ * <react-test-task-app> Implements wrapper for required by task form with validation
+ *
+ * Based on grid layout
+ *
+ * Render header with title, sidebar with options(validateOnChange currently), and form
  *
  * @customElement
  * @polymer
@@ -25,59 +29,7 @@ class ReactTestTaskApp extends PolymerElement {
   static get template() {
     // TODO: add more styles
     return html`
-      <style>
-        :host {
-          font-family: Arial, Verdana, sans-serif;
-          
-          display: grid;
-          grid-template-rows: 60px 1fr;
-          grid-template-columns: 150px 1fr;
-          grid-template-areas: "header header"
-                               "sidebar content";
-          grid-gap: 20px;
-        }
-        
-        h2 {
-          margin: 0;
-        }
-        
-        app-header {
-          grid-area: header;
-        }
-        
-        .content {
-          grid-area: content;
-          padding-right: 20px;
-        }
-        
-        .sidebar {
-          grid-area: sidebar;
-          padding-left: 20px;
-        }
-        
-        .sub-headline {
-          margin-bottom: 20px;
-        }
-        
-        form-field,
-        radio-group {
-          padding-bottom: 10px;
-        }
-        
-        .buttons {
-          margin-top: 40px;
-        }
-        
-        @media only screen and (max-width: 640px) {
-          :host {
-            grid-template-rows: 9.375vw 1fr; 
-          }
-          
-          .sub-headline {
-            font-size: 16px;
-          }
-        }
-      </style>
+      <link rel="stylesheet" href="/src/react-test-task-app.css">
       
       <app-header title="Polymer 3.0 fom validation app"></app-header>
       
@@ -92,6 +44,7 @@ class ReactTestTaskApp extends PolymerElement {
 
       <div class="content">
         <h2 class="sub-headline">Form:</h2>
+        
         <form-wrapper validate-on-change="[[validateOnChange]]" on-submit="onSubmit">
           <form>
             <form-field name="firstName"required disallowed="[[disallowed]]" label="First name"></form-field>
@@ -156,7 +109,6 @@ class ReactTestTaskApp extends PolymerElement {
    * @param {Event} event
   * */
   toggleValidateOnChange(event) {
-    console.log(event.target.checked);
     this.validateOnChange = event.target.checked;
   }
 }

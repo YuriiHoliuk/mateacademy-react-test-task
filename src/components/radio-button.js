@@ -1,6 +1,10 @@
 import { PolymerElement, html } from '@polymer/polymer';
 
 /**
+ * Wrapper for ```<input type="radio">```
+ *
+ * Render passed label
+ *
  * @customElement
  * @polymer
  */
@@ -31,6 +35,13 @@ export class RadioButton extends PolymerElement {
     };
   }
 
+  /**
+  * Redispatch change event
+   *
+   * Dispatched event contains current value in ```detail``` property
+   *
+  * @param {Event} event
+  * */
   onChange(event) {
     event.stopPropagation();
 
@@ -42,6 +53,11 @@ export class RadioButton extends PolymerElement {
     this.dispatchEvent(new CustomEvent('change', { detail: this.value }))
   }
 
+  /**
+  * Observer: Change ```<input>``` ```checked``` property
+   *
+  * TODO: remove this method and bind directly inside template
+  * */
   _changeChecked(checked) {
     // TODO: binding do not work
     this.$.input.checked = checked;

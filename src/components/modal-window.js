@@ -2,6 +2,16 @@ import { PolymerElement, html } from '@polymer/polymer';
 import '@polymer/polymer/lib/elements/dom-if';
 
 /**
+ * Informational modal window with overlay
+ *
+ * Render passed template, title and close button
+ *
+ * Can be toggled by changing ```active``` property
+ *
+ * Has fixed position and disable body scroll if opened
+ *
+ * TODO: add custom-properties for styling
+ *
  * @customElement
  * @polymer
  */
@@ -104,15 +114,30 @@ export class ModalWindow extends PolymerElement {
     };
   }
 
+  /**
+  * Close self
+  *
+   * @param {MouseEvent} event
+  * */
   close(event) {
     event.stopPropagation();
     this.active = false;
   }
 
+  /**
+  * Blocks clicks to application when clicking on overlay
+  *
+   * @param {MouseEvent} event
+  * */
   prevent(event) {
     event.stopPropagation();
   }
 
+  /**
+  * Observer: toggle global scroll when ```active``` property changed
+  *
+   * @param {boolean} active
+  * */
   _changeActive(active) {
     active
       ? document.body.style.overflowY = 'hidden'

@@ -3,6 +3,20 @@ import '@polymer/polymer/lib/elements/dom-repeat';
 
 import { validateInput } from "../utils/validate-input";
 
+/**
+ * Wrapper for select
+ *
+ * Validate value if have required property
+ *
+ * Render label and error message
+ *
+ * Receive options in format ```Array<{ value: string, label: string }>```
+ *
+ * Implements required API for ```<form-wrapper>```
+ *
+ * @customElement
+ * @polymer
+ * */
 export class FormSelect extends PolymerElement {
   static get is() {
     return 'form-select';
@@ -41,7 +55,7 @@ export class FormSelect extends PolymerElement {
       </style>
 
       <div class="wrapper">
-        <p class$="[[labelClass(valid)]]">[[_label(label)]]</p>
+        <p class$="[[_labelClass(valid)]]">[[_label(label)]]</p>
         
         <select name="[[name]]" disabled="[[disabled]]" on-change="onChange">
           <option value="" selected disabled hidden>Choose [[label]]</option>
@@ -79,6 +93,11 @@ export class FormSelect extends PolymerElement {
     }
   }
 
+  /**
+   * Perform required validation
+   *
+   * @return {object} ```{ [errorType: string]: boolean }``` OR ```null``` if validation passed
+   * */
   validate() {
     if (this.required && !this.value) {
       this._setValid(false);
@@ -89,6 +108,11 @@ export class FormSelect extends PolymerElement {
     return null;
   }
 
+  /**
+  * Handle and redispatch select change event
+   *
+   * Validate value if ```validateOnChange === true```
+  * */
   onChange(event) {
     event.stopPropagation();
 
@@ -108,7 +132,7 @@ export class FormSelect extends PolymerElement {
     return value === this.value;
   }
 
-  labelClass(valid) {
+  _labelClass(valid) {
     return `label${!valid ? ' invalid' : ''}`;
   }
 }
